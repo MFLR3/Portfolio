@@ -37,6 +37,7 @@ header {
     width:60%;
     margin: 20%;
     animation: rotateKeyboard1 60s linear infinite;
+    display:none;
 }
 
 .laptop-right {
@@ -44,6 +45,13 @@ header {
     width:60%;
     margin: 20%;
     animation: rotateKeyboard2 60s linear infinite;
+    display: none;
+}
+
+.laptop-middle {
+    grid-area: 1 / 2 / 3 / 3;
+    width:30%;
+    margin: 5%;
 }
 
 .about-me {
@@ -175,6 +183,14 @@ footer img {
 
     footer {
         margin:3rem;
+    }
+
+    .laptop-left, .laptop-right {
+        display: block;
+    }
+
+    .laptop-middle {
+        display:none;
     }
 }
 
