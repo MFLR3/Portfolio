@@ -1,4 +1,5 @@
 /* Max Portfolio Website */
+/* Mobile-First Approach */
 
 * {
     margin:0;
@@ -16,12 +17,6 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    display:grid;
-    grid-template-columns: 30% 70%;
-    width:100%;
-}
-
 @keyframes rotateKeyboard1 {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -32,6 +27,77 @@ header {
     100% { transform: rotate(540deg); }
 }
 
+h1, h2, h3 {
+    text-shadow:0px 2px 2px #5a004e;
+    text-align: center;
+}
+
+/* ===== HEADER SECTION =====*/
+header {
+    display:grid;
+    grid-template-columns: 30% 70%;
+    width:100%;
+}
+
+#wrapper {
+    height:100%;
+}
+
+.logo1 {
+    width:100%;
+    padding-top:2rem;
+    padding-left:1rem;
+}
+
+.logos {
+    grid-area: 1 / 1 / 2 / 2;
+    width:100%;
+}
+
+.localnavs {
+    grid-area: 1 / 2 / 2 / 5;
+    margin: 2rem 0rem 0rem 0rem;
+    font-size: 0.6rem;
+    text-align: center;    
+}
+
+.localnavs li {
+    display: inline-block;
+}
+
+.localnavs li a {
+    text-decoration: none;
+}
+
+
+/* ===== HERO SECTION =====*/
+.hero-section {
+    margin: 1rem 1rem ;
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+}
+
+.hero-section li {
+    font-size: 1rem;   
+    list-style-type: none; 
+}
+
+.hero-section ul {
+    margin: 1rem 0rem 1rem 0rem;
+    padding:0px;
+}
+
+.hero-section h1 {
+    font-size: 1.5rem;
+}
+
+.hero-section img {
+    width: 50%;
+    margin: 1rem 0rem 0rem 0rem;
+    text-align: center;
+}
+
+/* ===== ABOUT SECTION =====*/
 .laptop-left {
     grid-area: 1 / 1 / 3 / 2;
     width:60%;
@@ -60,73 +126,64 @@ header {
 }
 
 .about-me p {
-    font-size: 2rem;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about-me h2 {
+    font-size: 1.1rem;
     margin-top: 30px;
     text-align: center;
 }
 
 .about {
     display:grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows: 50% 50%;
 }
 
-#wrapper {
-    height:100%;
+/* ===== WORK SECTION =====*/
+.work {
+    color: #000000;
+    margin:4rem 1rem;
+    word-wrap: break-word;
 }
 
-.logo1 {
-    width:100%;
-    padding-top:2rem;
-    padding-left:1rem;
-}
-
-.logos {
-    grid-area: 1 / 1 / 2 / 2;
-    width:100%;
-}
-
-.hero-section {
-    margin: 1rem 1rem ;
-    grid-area: 1 / 1 / 2 / 2;
-    text-align: center;
-}
-
-.hero-section li {
-    font-size: 1rem;   
-    list-style-type: none; 
-}
-
-.hero-section ul {
-    margin: 1rem 0rem 1rem 0rem;
-    padding:0px;
-}
-
-.hero-section h1 {
+.work h2 {
     font-size: 1.5rem;
-}
-
-.hero-section img {
-    width: 50%;
-    margin: 1rem 0rem 0rem 0rem;
     text-align: center;
+    margin-bottom: 5rem;
+    display: block;
 }
 
-.localnavs {
-    grid-area: 1 / 2 / 2 / 5;
-    margin: 2rem 0rem 0rem 0rem;
-    font-size: 0.6rem;
-    text-align: center;    
+.work img {
+    max-width: 40%; /* Ensure the image doesn't exceed its parent's width */
+    height: auto; /* Let the browser calculate the height automatically based on the aspect ratio */
+    min-width: 100px; /* Set a minimum width for the image */
+    max-height: 300px; /* Set a maximum height for the image */
 }
 
-.localnavs li {
+.work p {
+    width:60%;
     display: inline-block;
+    margin-right: 60px;
+    font-size: 1.1rem;
 }
 
-.localnavs li a {
-    text-decoration: none;
+.work-project-1, .work-project-2, .work-project-3, .work-project-4 {
+    margin: 1rem 1rem;
+    padding:20px;
+    display: flex;
 }
 
+.work-project-1 *, .work-project-2 *, .work-project-3 *, .work-project-4 * {
+    margin: 1%;
+}
+
+    
+
+/* ===== FOOTER SECTION =====*/
 footer {
     margin: 3rem 0rem 1rem 0rem;
     text-align: center;
@@ -138,10 +195,26 @@ footer img {
     width:8%;
 }
 
-/* Media queries */
+/* ===== MEDiA QUERIES =====*/
 @media (min-width: 576px) {
     .localnavs {
         font-size: 1.3rem;      
+    }
+
+    .about p {
+        font-size: 1.5rem;        
+    }
+
+    .about-me h2 {
+        font-size: 1.7rem;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .hero-section img {
+        width: 30%;
+        margin: 1rem 0rem 0rem 0rem;
+        text-align: center;
     }
 }
 
@@ -165,12 +238,6 @@ footer img {
 @media (min-width: 992px) {
     .localnavs {
         font-size: 2rem;      
-    }
-
-    .hero-section img {
-        width: 30%;
-        margin: 1rem 0rem 0rem 0rem;
-        text-align: center;
     }
 
     .hero-section li {       
@@ -197,5 +264,15 @@ footer img {
 @media (min-width: 1200px) {
     .localnavs {
         font-size: 2.6rem;      
+    }
+
+    .about p {
+        font-size: 2rem;        
+    }
+
+    .about-me h2 {
+        font-size: 2.2rem;
+        margin-top: 30px;
+        text-align: center;
     }
 }
